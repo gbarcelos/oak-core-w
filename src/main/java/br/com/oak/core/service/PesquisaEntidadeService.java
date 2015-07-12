@@ -18,28 +18,8 @@ public abstract class PesquisaEntidadeService<E extends Entidade> {
 		return getDao().obter(id);
 	}
 
-//	@Transactional(readOnly = true, propagation = Propagation.SUPPORTS)
-//	public List<E> consultar(E entidade) {
-//		return getDao().consultar(entidade);
-//	}
-
 	@Transactional(readOnly = true, propagation = Propagation.SUPPORTS)
 	public List<E> listar() {
 		return getDao().listar();
 	}
-
-//	@Transactional(readOnly = true, propagation = Propagation.SUPPORTS)
-//	public List<E> consultar(Paginacao paginacao) {
-//		return getDao().listar();
-//	}
-
-//	@Transactional(readOnly = true, propagation = Propagation.SUPPORTS)
-//	public Long contadorConsulta(List<IParametroDeConsulta> parametrosDeConsulta) {
-//		return getDao().countConsultaGenerica(parametrosDeConsulta);
-//	}
-
-//	@Transactional(readOnly = true, propagation = Propagation.SUPPORTS)
-//	public List<?> consultar(String hql, Map<String, Object> parametros, Paginacao paginacao) {
-//		return getDao().consultar(hql, parametros, paginacao);
-//	}
 }
